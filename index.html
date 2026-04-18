@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loja Tech</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    🛒 Loja Tech - Tecnologia e Inovação
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#ofertas">Ofertas</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<div class="container">
+
+    <h1>Bem-vindo à nossa loja</h1>
+
+    <button onclick="mudarTema()">Mudar Tema</button>
+
+    <p>Os melhores produtos de tecnologia com os melhores preços.</p>
+
+    <p>Cliques nos produtos: <span id="contador">0</span></p>
+
+    <button onclick="mostrarCarrinho()">Ver Carrinho</button>
+
+    <h2>Produtos Disponíveis</h2>
+    <ul>
+        <li>Notebook</li>
+        <li>Mouse</li>
+        <li>Teclado</li>
+        <li>Monitor</li>
+        <li>Playstation 5</li>
+    </ul>
+
+    <h2>Nossa Loja</h2>
+
+    <img src="https://news.tec.br/wp-content/uploads/2025/11/O-crescimento-das-lojas-de-produtos-gamers-no-Brasil-e-o-impacto-no-mercado-de-tecnologia.jpg"
+         onclick="clicouImagem()">
+
+    <h2 id="produtos">Nossos Produtos</h2>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Notebook Gamer</h3>
+        <img src="https://m.media-amazon.com/images/I/81JElV8apnL._AC_SX679_.jpg">
+        <p>Alto desempenho para jogos.</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Mouse Sem Fio</h3>
+        <img src="https://m.media-amazon.com/images/I/718b9wK3eaL._AC_SX679_.jpg">
+        <p>Conforto e precisão</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Playstation 5</h3>
+        <img src="https://m.media-amazon.com/images/I/51SM5xU-M1L._AC_SX679_.jpg">
+        <p>Nova geração de games</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Fone de Ouvido Bluetooth</h3>
+        <img src="https://www.overmaze.com.br/cdn/shop/files/64432_1a360928-6dac-41f2-9256-8f81406f4c40_720x.jpg?v=1771994377">
+        <p>Som perfeito e sem fio</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Cadeira Gamer</h3>
+        <img src="https://m.media-amazon.com/images/I/5136+drDuIL._AC_SY300_SX300_QL70_ML2_.jpg">
+        <p>Performance e conforto para jogar</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Caixa de Som Gamer</h3>
+        <img src="https://m.media-amazon.com/images/I/61WltEBabEL._AC_SL1500_.jpg">
+        <p>Som e efeitos ao jogar</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Teclado Gamer</h3>
+        <img src="https://m.media-amazon.com/images/I/61fjJX9Jq2L._AC_SY300_SX300_QL70_ML2_.jpg">
+        <p>Tecnologia, agilidade e bom gosto</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Jogo Space Marine</h3>
+        <img src="https://m.media-amazon.com/images/I/81oYUkXWukL._AC_SX679_.jpg">
+        <p>O melhor de todos os jogos</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+    </div>
+
+    <br>
+
+    <div class="card video-card">
+        <h3>PS3</h3>
+        <a href="https://www.youtube.com/watch?v=vwwmXTaNFRA" target="_blank">
+            <img src="https://img.youtube.com/vi/vwwmXTaNFRA/hqdefault.jpg">
+        </a>
+        <p>Clique na imagem para assistir ao vídeo.</p>
+    </div>
+
+    <hr>
+
+    <h2 id="ofertas">Tabela de Preços</h2>
+
+    <table>
+        <tr><th>Produto</th><th>Preço</th><th>Estoque</th></tr>
+        <tr><td>Notebook Gamer</td><td>R$ 7.500</td><td>10</td></tr>
+        <tr><td>Mouse Sem Fio</td><td>R$ 320</td><td>50</td></tr>
+        <tr><td>Playstation 5</td><td>R$ 5.000</td><td>30</td></tr>
+        <tr><td>Fone de Ouvido Bluetooth</td><td>R$ 450</td><td>40</td></tr>
+        <tr><td>Cadeira Gamer</td><td>R$ 1.200</td><td>15</td></tr>
+        <tr><td>Caixa de Som Gamer</td><td>R$ 600</td><td>25</td></tr>
+        <tr><td>Teclado Gamer</td><td>R$ 500</td><td>35</td></tr>
+        <tr><td>Jogo Space Marine</td><td>R$ 250</td><td>20</td></tr>
+    </table>
+
+    <h2 id="contato">Fale Conosco</h2>
+
+    <form onsubmit="return validarFormulario()">
+        <label>Nome:</label><br>
+        <input type="text" id="nome" placeholder="Digite seu nome"><br><br>
+        <label>Email:</label><br>
+        <input type="email" placeholder="Digite seu email"><br><br>
+        <label>Telefone:</label><br>
+        <input type="tel" placeholder="(11) 99999-9999"><br><br>
+        <label>Assunto:</label><br>
+        <select>
+            <option>Dúvida</option>
+            <option>Reclamação</option>
+            <option>Sugestão</option>
+        </select><br><br>
+        <label>Mensagem:</label><br>
+        <textarea placeholder="Digite sua mensagem"></textarea><br><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div id="modalCarrinho" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharCarrinho()">&times;</span>
+            <h2>🛒 Seu Carrinho</h2>
+            <div id="listaCarrinho">
+                <!-- Itens via JS -->
+            </div>
+            <div class="modal-footer">
+                <button onclick="alert('Finalizando compra...')">Finalizar Compra</button>
+                <button onclick="limparCarrinho()" style="background:#666; margin-top:10px;">Limpar Carrinho</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2026 Loja Tech | Todos os direitos reservados
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
